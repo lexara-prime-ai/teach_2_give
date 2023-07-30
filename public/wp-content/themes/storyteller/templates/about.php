@@ -47,7 +47,7 @@ Template Name: About Us
         </a>
     </div>
 </section>
-<div class="page-content" style="overflow-x: hidden;">
+<div class="page-content">
     <!-- STATS SECTION -->
     <section class="stats-section">
         <!-- STATS -->
@@ -125,7 +125,7 @@ Template Name: About Us
                 </div>
             </div>
             <!-- ABOUT CONTENT -->
-            <div class="about-content" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content" data-aos="fade-up" data-aos-delay="300">
                 <!-- TITLE -->
                 <h1 class="about-title">
                     <span>More about</span> Teach2Give
@@ -261,7 +261,7 @@ Template Name: About Us
 
             <div class="row">
                 <div class="col">
-                    <div class="feature-img" data-aos="fade-left" data-aos-delay="300">
+                    <div class="feature-img" data-aos="fade-up" data-aos-delay="300">
                         <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/faith_njoroge.png') ?> width="100%">
                         <!-- PLAY BUTTON -->
                         <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
@@ -281,7 +281,7 @@ Template Name: About Us
                 </div>
 
                 <div class="col">
-                    <div class="small-img-row" data-aos="fade-left" data-aos-delay="400">
+                    <div class="small-img-row" data-aos="fade-up" data-aos-delay="400">
                         <div class="small-img">
                             <img src=<?php echo get_theme_file_uri('/assets/images/photos/faith_kihara.png') ?>>
                             <!-- PLAY BUTTON -->
@@ -302,7 +302,7 @@ Template Name: About Us
                         </div>
                     </div>
 
-                    <div class="small-img-row" data-aos="fade-right" data-aos-delay="600">
+                    <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
                         <div class="small-img">
                             <img src=<?php echo get_theme_file_uri('/assets/images/photos/daniel_wachira.png') ?>
                                 width="40%">
@@ -324,7 +324,7 @@ Template Name: About Us
                         </div>
                     </div>
 
-                    <div class="small-img-row" data-aos="fade-right" data-aos-delay="600">
+                    <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
                         <div class="small-img">
                             <img src=<?php echo get_theme_file_uri('/assets/images/photos/brian_orina.png') ?>
                                 width="40%">
@@ -506,7 +506,7 @@ Template Name: About Us
             Our Sponsors
         </h2>
         <!-- SPONSORS -->
-        <div class="sponsors" data-aos="fade-left" data-aos-delay="300">
+        <div class="sponsors" data-aos="fade-up" data-aos-delay="300">
             <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/sos.png') ?> alt="sponsor"
                 class="sponsor-logo">
             <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/compassion.png') ?> alt="sponsor"

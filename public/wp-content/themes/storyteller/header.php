@@ -40,7 +40,7 @@
         </a>
       </li>
       <li class="link-item">
-        <a class="link">
+        <a class="link" href=<?php echo site_url('/blog'); ?>>
           Blog
         </a>
       </li>
