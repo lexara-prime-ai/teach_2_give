@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Teach2give</title>
+  <title>Teach2give | Mentor Platform</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href=<?php echo get_theme_file_uri('/assets/icons/favicon.ico') ?>>
   <!-- NB : Load files -->
@@ -79,7 +79,7 @@
           <i class="fas fa-book"></i>
         </span>
       </a>
-      <a href="#why-mentor">
+      <a href=<?php echo home_url('/mentor.php'); ?>>
         Why Mentor?
         <span>
           <i class="fas  fa-business-time"></i>
