@@ -10,7 +10,7 @@ Template Name: About Us
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4') ?> autoplay
+    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_1.mp4" autoplay
         muted loop></video>
 
     <!-- CONTENT -->
@@ -28,13 +28,13 @@ Template Name: About Us
         </h1>
 
         <!-- INFO -->
-        <p class="info" data-aos="fade-right" data-aos-delay="300">
+        <p class="info" data-aos="fade-right" data-aos-delay="200">
             "Nurturing minds for a brighter future and endless possibilities."
         </p>
     </div>
 
     <!-- SOCIAL MEDIA -->
-    <div class="social-media-icons" data-aos="fade-left" data-aos-delay="400">
+    <div class="social-media-icons" data-aos="fade-left" data-aos-delay="300">
         <!-- LINKS -->
         <a>
             <i class="fa-brands fa-linkedin-in"></i>
@@ -261,12 +261,13 @@ Template Name: About Us
 
             <div class="row">
                 <div class="col">
+                    <!-- MENTEE FOOTAGE -->
                     <div class="feature-img" data-aos="fade-up" data-aos-delay="300">
-                        <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/faith_njoroge.png') ?> width="100%">
+                        <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/faith_kihara.png') ?> width="100%">
                         <!-- PLAY BUTTON -->
                         <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
                             class="play-btn"
-                            onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/faith_njoroge.mp4') ?>')">
+                            onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/faith_kihara.mp4')">
 
                         <!-- VIDEO PLAYER -->
                         <section class="video-player" id="video-player" #videoPlayer>
@@ -281,13 +282,15 @@ Template Name: About Us
                 </div>
 
                 <div class="col">
-                    <div class="small-img-row" data-aos="fade-up" data-aos-delay="400">
+                    <!-- MENTEE FOOTAGE -->
+                    <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
                         <div class="small-img">
-                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/faith_kihara.png') ?>>
+                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/faith_kihara.png') ?>
+                                width="40%">
                             <!-- PLAY BUTTON -->
                             <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
                                 class="play-btn"
-                                onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/faith_kihara.mp4') ?>')">
+                                onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/faith_kihara.mp4')">
                         </div>
                         <div class="mentee-info">
                             <p>
@@ -297,33 +300,12 @@ Template Name: About Us
                             </p>
 
                             <p class="mentee-bio">
-                                Meet Faith Kihara...
+                                Say hello to Brian Orina....
                             </p>
                         </div>
                     </div>
 
-                    <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
-                        <div class="small-img">
-                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/daniel_wachira.png') ?>
-                                width="40%">
-                            <!-- PLAY BUTTON -->
-                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
-                                class="play-btn"
-                                onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/daniel_wachira.mp4') ?>')">
-                        </div>
-                        <div class="mentee-info">
-                            <p>
-                                Daniel Wachira | <span>
-                                    Mentee
-                                </span>
-                            </p>
-
-                            <p class="mentee-bio">
-                                "Sometimes you need a mentor to help you realize yourself..."
-                            </p>
-                        </div>
-                    </div>
-
+                    <!-- MENTEE FOOTAGE -->
                     <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
                         <div class="small-img">
                             <img src=<?php echo get_theme_file_uri('/assets/images/photos/brian_orina.png') ?>
@@ -331,7 +313,7 @@ Template Name: About Us
                             <!-- PLAY BUTTON -->
                             <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
                                 class="play-btn"
-                                onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/brian_orina.mp4') ?>')">
+                                onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/brian_orina.mp4')">
                         </div>
                         <div class="mentee-info">
                             <p>

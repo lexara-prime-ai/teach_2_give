@@ -1605,7 +1605,9 @@ video:focus {
     font-size: .92rem;
     list-style: none;
     font-weight: 600;
-    padding-bottom: .5rem
+    line-height: 1.4rem;
+    letter-spacing: .9px;
+    padding-bottom: 0.8rem;
 }
 
 .mentor-role-content .mentor-expectations li span {
@@ -1631,12 +1633,15 @@ video:focus {
     -ms-flex-pack: center;
     justify-content: center;
     gap: .4rem;
-    padding-left: 1.9rem
+    padding-left: 1.9rem;
+    line-height: 1.3rem;
 }
 
 .virtue {
     font-weight: 700;
-    font-size: .9rem
+    font-size: .9rem;
+    letter-spacing: 1px;
+    line-height: 1.3rem;
 }
 
 .become-a-mentor-cta {
@@ -1816,6 +1821,10 @@ video:focus {
     -webkit-box-shadow: var(--green-glow);
     box-shadow: var(--green-glow);
     opacity: 1
+}
+
+.result.red {
+    border-bottom: 9px solid var(--red);
 }
 
 .result h2 {

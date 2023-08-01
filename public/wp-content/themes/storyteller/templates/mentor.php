@@ -10,7 +10,7 @@ Template Name: Mentor
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4') ?> autoplay
+    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_2.mp4" autoplay
         muted loop></video>
     <!-- CONTENT -->
     <div class="content active">
@@ -59,7 +59,7 @@ Template Name: Mentor
                     <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/nickson_chebii.png') ?> width="100%">
                     <!-- PLAY BUTTON -->
                     <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?> class="play-btn"
-                        onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/nickson_chebii.mp4') ?>')">
+                        onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/nickson_chebii.mp4')">
                     <!-- VIDEO PLAYER -->
                     <section class="video-player" id="video-player">
                         <video width="100%" controls autoplay id="video">
@@ -75,10 +75,10 @@ Template Name: Mentor
             <div class="mentor-role-content">
                 <h3> Here's what being a Mentor entails: </h3>
                 <ul class="mentor-expectations">
-                    <li> 1. <span>Meaningful Interactions</span>: Connect with our students once a month, dedicating
+                    <li><span>Meaningful Interactions</span>: Connect with our students once a month, dedicating
                         at least one hour to speak directly with them. These regular interactions establish a
                         supportive and inspiring relationship that fuels their growth and development. </li>
-                    <li> 2. <span>Career Guidance</span>: By providing guidance, wisdom, and support, mentors offer
+                    <li><span>Career Guidance</span>: By providing guidance, wisdom, and support, mentors offer
                         invaluable insights into the industry, foster skill development, and build the confidence needed
                         to help the students navigate the professional world successfully. Through mentorship, students
                         gain a competitive edge in the global market.</li>
@@ -134,7 +134,7 @@ Template Name: Mentor
                 diplomas and Kenyan work visas. This opens doors to employment opportunities, enabling them to
                 support themselves, their families, and their communities. </p>
         </div>
-        <div class="result">
+        <div class="result red">
             <h2>Employment Advantage</h2>
             <p> By mentoring a student, you give them a competitive edge in the job market. They become equipped with
                 the skills and legal documentation necessary to secure meaningful employment, fostering independence and

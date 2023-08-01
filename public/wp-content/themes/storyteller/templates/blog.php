@@ -10,7 +10,7 @@ Template Name: Blog
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4') ?> autoplay
+    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_1.mp4" autoplay
         muted loop></video>
 
     <!-- CONTENT -->
