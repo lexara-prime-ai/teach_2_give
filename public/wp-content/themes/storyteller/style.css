@@ -1,4 +1,7 @@
-/* Theme Name: storyteller Version: 1.0 Author: Irfan Ghat */
+/*  Theme Name: storyteller
+    Version: 1.0 
+    Author: Irfan Ghat 
+*/
 :root {
     --dark: #212429;
     --dark-alt: #242424;
@@ -655,6 +658,23 @@ html {
     transform: rotate(40deg)
 }
 
+.become-a-mentor-content {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 999;
+    background: #ffffff;
+    -webkit-box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    padding: 1rem 5%;
+    color: var(--dark);
+}
+
+.become-a-mentor-content {
+    background: red;
+}
+
 .become-a-mentor-content h2 {
     pointer-events: none;
     padding-bottom: 1rem;
@@ -669,21 +689,8 @@ html {
     line-height: 1rem
 }
 
-.become-a-mentor-content {
-    max-width: 1000px;
-    margin: auto;
-    position: relative;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-    padding: 1rem;
-    color: var(--white)
-}
-
 .become-a-mentor-content-wrapper {
-    color: var(--white)
+    color: var(--dark);
 }
 
 .become-a-mentor-content-wrapper video {
