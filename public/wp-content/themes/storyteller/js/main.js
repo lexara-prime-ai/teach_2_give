@@ -6,6 +6,7 @@ function openSideMenu() {
 function closeSideMenu() {
     document.getElementById("side-menu").style.width = "0";
     document.querySelector(".side-nav-links").style.display = "none";
+    closeForms();
 }
 
 const videoElement = document.querySelector("#video");
@@ -22,3 +23,21 @@ function stopVideo() {
 }
 
 const link = document.querySelector('.link');
+
+
+const contactForm = document.querySelector('.contact-form');
+const applicationForm = document.querySelector('.become-a-mentor-form');
+
+
+function displayContactForm() {
+    contactForm.style.display = 'block';
+}
+
+function displayApplicationForm() {
+    applicationForm.style.display = 'block';
+}
+
+function closeForms() {
+    contactForm.style.display = 'none';
+    applicationForm.style.display = 'none';
+}
