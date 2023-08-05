@@ -8,10 +8,15 @@
     --text-color: #242424;
     --transparent: #979797a4;
     --white: #E5E5E5;
+    --pure-white: #fff;
+    --transparent-white: #ffffffe0;
+    --transparent-white-alt: rgba(255, 255, 255, 0.9);
     --white-alt: #F5F5F5;
     --light-gray: #e0e0e0;
     --red: #B80100;
     --green: #00ad17;
+    --light-green: rgba(43, 255, 0, 0.7);
+    --dark-green: rgba(154, 255, 87, 0.3);
     --green-glow: 0 1rem 1rem 0 rgba(0, 255, 13, 0.2);
     --overlay: rgba(0, 0, 0, .7);
     --shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .2)
@@ -33,11 +38,11 @@ html {
 
 ::-webkit-scrollbar {
     width: 3px;
-    background: var(--red)
+    background: #00000000
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--dark);
+    background: var(--red);
     height: 3px;
     border-bottom: 32px
 }
@@ -222,6 +227,10 @@ html {
     width: 100%
 }
 
+.cta {
+    text-decoration: none;
+}
+
 .cta-btn {
     border: none;
     border-left: 3px solid var(--red);
@@ -270,32 +279,6 @@ html {
 .bar-icon {
     color: var(--white-alt);
     font-size: 1.5rem
-}
-
-@media (max-width: 1040px) {
-    .navigation {
-        padding: 1rem 2%
-    }
-
-    .nav-links {
-        display: none
-    }
-
-    .side-navigation-toggle {
-        display: block
-    }
-}
-
-@media (max-width: 768px) {
-    .side-navigation-toggle {
-        display: block
-    }
-}
-
-@media (max-width: 500px) {
-    .logo {
-        width: 60%
-    }
 }
 
 .hero-section {
@@ -484,9 +467,9 @@ html {
 
 .info-body {
     font-size: .9rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-color);
-    line-height: 1.1rem;
+    line-height: 1.3rem;
     letter-spacing: 1px
 }
 
@@ -551,7 +534,7 @@ html {
 
 .how-it-works {
     padding: 6rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--transparent-white-alt);
     color: var(--text-color)
 }
 
@@ -663,34 +646,43 @@ html {
     margin: auto;
     position: relative;
     z-index: 999;
+    border-radius: 12px;
+    padding: 2rem 8%;
     background: #ffffff;
-    -webkit-box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-    padding: 1rem 5%;
+    border-top: 7px solid var(--red);
     color: var(--dark);
+    box-shadow: var(--shadow);
 }
 
-.become-a-mentor-content {
-    background: red;
+@keyframes hover {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
 }
 
 .become-a-mentor-content h2 {
     pointer-events: none;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     font-size: 3rem;
-    color: var(--red)
+    color: var(--red);
 }
 
 .become-a-mentor-content p {
     pointer-events: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
-    line-height: 1rem
-}
-
-.become-a-mentor-content-wrapper {
+    line-height: 1rem;
     color: var(--dark);
+    border-left: 2px solid var(--red);
+    padding-left: .9rem;
 }
 
 .become-a-mentor-content-wrapper video {
@@ -713,30 +705,50 @@ html {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
-    padding: 2rem
+    padding: 1.5rem
 }
 
 .mentor-list li {
     font-weight: 600;
     font-size: 1.1rem;
-    color: var(--white);
-    list-style: none
+    color: var(--dark);
+    list-style: none;
+    pointer-events: none;
 }
 
 .mentor-list li span {
     font-weight: 700;
     font-size: 1.7rem;
     color: var(--white);
-    background: rgba(43, 255, 0, 0.7);
+    background: var(--light-green);
     -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--dark-green);
+    border-right: 12px solid transparent;
     border-radius: 3px;
-    padding: 0 .2rem;
-    margin-right: .5rem
+    padding: 0 .4rem;
+    margin-right: .5rem;
+    animation: bg-glow 2.5s infinite;
 }
+
+
+@keyframes bg-glow {
+    0% {
+        border-right: 12px solid #008612a9;
+    }
+
+    50% {
+        border-right: 12px solid transparent;
+    }
+
+    100% {
+        border-right: 12px solid #008612a9;
+    }
+}
+
+/* ABOUT US PAGE */
 
 .stats-section {
     background: #0000008e;
@@ -826,7 +838,9 @@ html {
     flex-direction: column;
     gap: 1rem;
     padding: 2rem;
-    position: relative
+    padding-left: 2rem;
+    position: relative;
+    border-left: 1px solid var(--red);
 }
 
 .about-icon {
@@ -848,6 +862,8 @@ html {
 
 .motto {
     font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
     margin-left: 2rem;
     white-space: nowrap
 }
@@ -886,8 +902,6 @@ html {
     width: 100%;
     position: relative;
     background: transparent;
-    border-right: 1px solid var(--red);
-    padding-right: 2rem
 }
 
 .about-img-container img {
@@ -912,19 +926,19 @@ html {
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* background: var(--dark);
-    */
     align-items: center;
 }
 
 .our-purpose {
     background: #ffffff;
     color: var(--dark-alt);
-    padding: 2rem 5rem;
+    padding: 1rem 5rem;
 }
 
 .our-purpose-title {
     font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .9px;
     padding-bottom: 1.3rem;
     color: var(--dark-alt);
 }
@@ -958,7 +972,6 @@ html {
     background-blend-mode: ;
     backdrop-filter: blur(42px);
     -webkit-backdrop-filter: blur(42px);
-    box-shadow: var(--shadow);
     font-size: .9rem;
     font-weight: 600;
     letter-spacing: 1.1px;
@@ -972,12 +985,12 @@ html {
 }
 
 .opacity-lvl-1 {
-    opacity: .69;
+    opacity: .89;
     box-shadow: none;
 }
 
 .opacity-lvl-2 {
-    opacity: .4;
+    opacity: .79;
     box-shadow: none;
 }
 
@@ -990,7 +1003,9 @@ html {
 .our-vision {
     padding: 5rem;
     color: var(--dark-alt);
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
     border-left: 1px solid var(--dark-alt);
     padding-left: 2rem;
 }
@@ -1001,6 +1016,7 @@ html {
 }
 
 .our-vision-title p {
+    margin-top: .7rem;
     font-size: 1.1rem;
 }
 
@@ -1009,9 +1025,9 @@ html {
 }
 
 .commitment {
-    background: #fff;
-    color: #353131;
-    box-shadow: var(--shadow);
+    background: var(--pure-white);
+    color: var(--text-color);
+    box-shadow: 0 .9rem .9rem 0 rgba(0, 0, 0, 0.055);
     text-align: left;
     border-radius: 9px;
     border-right: 6px solid var(--green);
@@ -1043,41 +1059,6 @@ html {
     padding-bottom: .9rem;
 }
 
-/* GRID WRAPPER MEDIA QUERIES */
-@media (max-width: 768px) {
-    .grid-wrapper {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 1rem;
-        align-items: start;
-    }
-
-    .our-vision {
-        border-left: none;
-    }
-
-    .commitments {
-        display: flex;
-        align-items: start;
-        line-height: 1.3rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .our-purpose {
-        padding: 1rem 1rem;
-    }
-
-    .purpose {
-        border-left: 2px solid var(--red);
-    }
-
-    .our-vision {
-        padding: 0rem;
-        padding: 1rem;
-    }
-}
-
 .time {
     padding: 1rem 8%;
 }
@@ -1098,28 +1079,32 @@ html {
     font-weight: 700;
     font-size: 1.6rem;
     padding-bottom: .8rem;
+    letter-spacing: 1px;
 }
 
 .time-section-title .sub-title span {
     color: var(--red);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .time-section-list {
-    font-weight: 700;
-    line-height: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 2.6rem;
 }
 
 .time-section-list li {
     padding-bottom: 1rem;
-    line-height: 1.4rem;
-    font-weight: 600;
+    line-height: 1.5rem;
+    font-weight: 500;
     color: #353131;
 }
 
 .additional-time-content {
     padding: 1rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.4rem;
     padding-top: 1rem;
     border-left: 6px solid var(--green);
     margin-top: 1rem;
@@ -1166,8 +1151,9 @@ html {
 }
 
 .testimonial-section-info {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
     width: 70%;
     margin: auto
 }
@@ -1200,7 +1186,8 @@ html {
     margin: auto;
     position: relative;
     overflow: hidden;
-    border-radius: 21px
+    border-radius: 21px;
+    box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .large-thumbnail {
@@ -1350,18 +1337,12 @@ html {
     font-size: 1rem
 }
 
-@media (max-width:500px) {
-    .mentee-info p {
-        text-align: left;
-        font-size: .9rem
-    }
-}
-
 .mentee-info .mentee-bio {
     width: 70%;
-    font-weight: 600;
+    font-weight: 500;
     font-size: .7rem;
     line-height: 1rem;
+    letter-spacing: .4px;
 }
 
 .video-player {
@@ -1415,7 +1396,8 @@ video:focus {
 
 .employee-section .employee-section-info {
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 1px;
     width: 60%;
     margin: auto
 }
@@ -1551,7 +1533,7 @@ video:focus {
 
 .what-does-a-mentor-do {
     padding: 3rem 7%;
-    background: #ffffffe0
+    background: var(--transparent-white);
 }
 
 .what-does-a-mentor-do-title {
@@ -1562,8 +1544,9 @@ video:focus {
 }
 
 .what-does-a-mentor-do-title h2 {
-    font-size: 2.5rem;
-    padding-bottom: 1rem
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+    color: var(--dark);
 }
 
 .what-does-a-mentor-do-title h2 span {
@@ -1573,13 +1556,15 @@ video:focus {
 }
 
 .what-does-a-mentor-do-title p {
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .6px;
     line-height: 1.4rem;
 }
 
 .what-does-a-mentor-do-title .bold {
-    font-weight: 700
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: .9px;
 }
 
 .content-wrapper-row {
@@ -1599,11 +1584,14 @@ video:focus {
 
 .mentor-role-content {
     max-width: 45%;
+    border-left: 1px solid var(--dark-alt);
+    padding-left: 2rem;
     margin-left: 4rem
 }
 
 .mentor-role-content h3 {
     font-weight: 700;
+    font-size: 1.8rem;
     padding-bottom: 1rem;
     color: var(--red)
 }
@@ -1611,16 +1599,22 @@ video:focus {
 .mentor-role-content .mentor-expectations li {
     font-size: .92rem;
     list-style: none;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.4rem;
     letter-spacing: .9px;
     padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .mentor-role-content .mentor-expectations li span {
     font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--green)
+    font-size: 1.1rem;
+    padding: .3rem;
+    margin-right: .4rem;
+    color: var(--pure-white);
+    background: var(--light-green);
+    border-radius: 4px;
+    animation: bg-glow 3s infinite;
 }
 
 .virtues {
@@ -1665,7 +1659,8 @@ video:focus {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    cursor: pointer
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .become-a-mentor-cta:hover {
@@ -1681,7 +1676,8 @@ video:focus {
     border-radius: 50px;
     border-radius: 24px 0 24px 0;
     font-size: .9rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 1px;
     border-left: 9px solid var(--green);
     border-bottom: 9px solid var(--red);
     padding: 4rem;
@@ -1690,13 +1686,15 @@ video:focus {
 }
 
 .additional-mentor-content p span {
+    font-weight: 700;
     font-size: 1.3rem;
     color: var(--green)
 }
 
 .additional-mentor-content .bold {
     margin-top: 1rem;
-    font-weight: 700;
+    font-weight: 500;
+    opacity: .8;
     border-left: 9px solid var(--red);
     border-bottom: .5px solid var(--light-gray);
     border-radius: 0 24px 24px 0;
@@ -1772,11 +1770,15 @@ video:focus {
 
 .impact-title h2 {
     font-size: 2.4rem;
-    font-weight: 700
+    font-weight: 700;
+    color: var(--dark);
 }
 
 .impact-title p {
-    font-weight: 600
+    padding-top: .8rem;
+    font-weight: 500;
+    letter-spacing: .9px;
+    line-height: 1.3rem;
 }
 
 .impact-title p span {
@@ -1806,12 +1808,12 @@ video:focus {
 
 .result {
     width: 97%;
-    height: 250px;
+    height: 320px;
     border-radius: 18px;
     border-bottom: 9px solid var(--green);
     cursor: -webkit-grab;
     cursor: grab;
-    opacity: .5;
+    opacity: .8;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease
@@ -1834,6 +1836,11 @@ video:focus {
     border-bottom: 9px solid var(--red);
 }
 
+.result.red h2 {
+    background: var(--red);
+    border-bottom: 1px solid var(--red)
+}
+
 .result h2 {
     padding: .6rem;
     font-weight: 700;
@@ -1845,8 +1852,10 @@ video:focus {
 .result p {
     padding: 2rem;
     font-size: .9rem;
-    font-weight: 600;
-    padding-top: .5rem
+    font-weight: 500;
+    line-height: 1.2rem;
+    letter-spacing: .9px;
+    padding-top: 1rem
 }
 
 .time {
@@ -1965,7 +1974,336 @@ video:focus {
     cursor: pointer;
 }
 
+
+
+/* WILD CARD */
+/* @media (max-width: 683px) {
+    .feature-img {
+        width: 500px;
+        margin-right: 0;
+    }
+
+    .video-player {
+        margin-right: 1rem;
+    }
+} */
+
+footer {
+    /* background: linear-gradient(109.6deg, rgb(0, 0, 0) 64.2%, rgb(0, 0, 0) 91.1%); */
+    background: var(--pure-white);
+    box-shadow: 0 4rem 4rem 0 rgba(0, 0, 0, .59);
+    position: relative;
+    z-index: 222;
+    height: 400px;
+    padding: 4rem
+}
+
+.footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.footer-logo {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-right: 20px solid var(--green);
+    border-radius: 6px;
+    -webkit-box-shadow: var(--green-glow);
+    box-shadow: var(--green-glow);
+    -webkit-animation: 2.5s border-glow infinite;
+    animation: 2.5s border-glow infinite;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+    cursor: pointer;
+    opacity: .7
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+.more-from-teach2give {
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .9px;
+    width: 430px;
+    color: var(--text-color);
+    margin-top: 1.7rem;
+}
+
+.more-info h2 {
+    padding-bottom: 1rem;
+    color: var(--dark-alt);
+}
+
+.hyper-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.hyper-links .hyper-link {
+    list-style: none;
+    font-weight: 500;
+    color: #aaaaaa;
+    cursor: pointer;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease
+}
+
+.hyper-links .hyper-link a {
+    text-decoration: none;
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: .4s all ease
+}
+
+.hyper-links .hyper-link:hover,
+.hyper-links .hyper-link:hover a:hover {
+    color: var(--dark)
+}
+
+.subscription-section h2 {
+    padding-bottom: 1rem;
+    color: var(--dark);
+}
+
+.subscription-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: .6rem
+}
+
+.subscription-form input {
+    border: none;
+    border-radius: 6px;
+    background: var(--white);
+    padding: .7rem;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    transition: .3s all ease;
+}
+
+.subscription-form input:focus {
+    background: var(--pure-white);
+    box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .1);
+    transform: translateY(-3px);
+    outline: none
+}
+
+.subscription-form .subscribe-btn {
+    max-width: 150px;
+    float: right;
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: .8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer
+}
+
+.subscription-form .subscribe-btn:hover {
+    opacity: .9;
+}
+
+/* FORMS */
+/* sticky ELEMENT: make an element "stick" to a specific position on the screen as the user scrolls */
+.sticky {
+    position: fixed;
+    top: 6%;
+    right: 30%;
+    z-index: 999999;
+    animation: hover 2.5s infinite;
+}
+
+.contact-form,
+.become-a-mentor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 1rem;
+    transition: .2s all ease;
+    display: none;
+}
+
+.contact-form form,
+.become-a-mentor-form form {
+    background: var(--white-alt);
+    border: 1px solid var(--light-gray);
+    border-top: 9px solid var(--red);
+    border-radius: 10px;
+    box-shadow: 0 5rem 5rem 0 rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.form-title {
+    font-size: 2rem;
+    width: 90%;
+    justify-content: flex-end;
+    color: var(--dark-alt);
+}
+
+.contact-form form input,
+.become-a-mentor-form form input,
+textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #5f5f5f;
+    background: transparent;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: .9px;
+    line-height: 1.3rem;
+    margin-bottom: .9rem;
+    padding: .3rem;
+    transition: .2s all ease;
+}
+
+.contact-form form input:focus,
+.become-a-mentor-form form input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.contact-form form input:hover,
+.become-a-mentor-form form input:hover,
+textarea:hover {
+    border-bottom: 1px solid #797979;
+}
+
+textarea {
+    height: 40px;
+    resize: none;
+    transition: .3s all ease;
+}
+
+textarea:focus {
+    height: 275px;
+}
+
+.submit-form-btn {
+    border: none;
+    background: var(--red);
+    color: var(--pure-white);
+    padding: .8rem;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s all ease;
+}
+
+.submit-form-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    opacity: 1;
+}
+
+
+
+/* 2048 PIXELS */
+@media (max-width: 2048px) {
+    .how-it-works {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+/* 1440 PIXELS */
+@media (max-width: 1440px) {
+    .how-it-works {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* 1040 PIXELS */
+@media (max-width: 1040px) {
+    .navigation {
+        padding: 1rem 2%
+    }
+
+    .nav-links {
+        display: none
+    }
+
+    .side-navigation-toggle {
+        display: block
+    }
+
+    .hero-section {
+        padding: 100px 20px
+    }
+
+    .home .social-media-icons {
+        right: 15px
+    }
+
+    .feature-img {
+        width: 500px
+    }
+
+    .testimonials-container {
+        width: 90%
+    }
+}
+
+
+/* 768 PIXELS */
 @media (max-width: 768px) {
+    .home .content .slogan span {
+        line-height: 62px
+    }
+
+    .side-navigation-toggle {
+        display: block
+    }
+
+    /* GRID WRAPPER MEDIA QUERIES */
+    .grid-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem;
+        align-items: start;
+    }
+
+    .our-vision {
+        border-left: none;
+    }
+
+    .commitments {
+        display: flex;
+        align-items: start;
+        line-height: 1.3rem;
+    }
+
     .content-wrapper-row {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1975,12 +2313,15 @@ video:focus {
 
     .mentor-role-content {
         max-width: 100%;
-        margin-left: 0;
-        padding-top: 2rem
+        padding-top: 2rem;
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0
     }
 
     .what-does-a-mentor-do-title h2 {
         font-size: 2.5rem;
+        width: 100%;
         white-space: nowrap
     }
 
@@ -1990,7 +2331,8 @@ video:focus {
 
     .what-does-a-mentor-do-title p {
         width: 100%;
-        text-align: left
+        text-align: left;
+        padding-top: 1rem;
     }
 
     .impact-title p {
@@ -2015,9 +2357,239 @@ video:focus {
         gap: 2rem;
         align-items: center;
     }
+
+
+
+    .about-img-container {
+        display: none
+    }
+
+    .about-section {
+        padding: 1rem 2rem
+    }
+
+    .about-section-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        max-width: 900px;
+        margin: auto;
+        margin-top: -4rem
+    }
+
+    .testimonials-container {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 0
+    }
+
+    .section-title-wrapper {
+        padding-top: 0;
+        padding-bottom: 3.5rem;
+    }
+
+    .testimonial-section-title {
+        font-size: 2.8rem;
+    }
+
+    .testimonial-section-info {
+        font-size: .8rem;
+        width: 100%
+    }
+
+    .testimonial-section-info span {
+        font-size: 1rem
+    }
+
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .feature-img {
+        width: 500px;
+        height: 350px;
+        margin: auto
+    }
+
+    .small-img-row {
+        margin: auto;
+        margin: 20px 0;
+        border-right: 6px solid var(--red);
+        width: 100%
+    }
+
+    .employee-section {
+        padding: 1rem
+    }
+
+    .employee-section-info-wrapper {
+        margin-top: 0;
+        margin-bottom: 7rem
+    }
+
+    .employee-section .employee-section-title {
+        margin-top: 1.7rem;
+        font-size: 2.5rem;
+        text-align: center
+    }
+
+    .employee-section .employee-section-info {
+        width: 80%;
+        font-size: .9rem
+    }
+
+    .employee-cards {
+        margin-bottom: 6rem
+    }
+
+    .employee-avatar .avatar {
+        width: 100px;
+        height: 100px
+    }
+
+    .employee-card .employee-card-content .employee-name {
+        font-size: 1.1rem
+    }
+
+    .employee-card .employee-card-content .employee-title {
+        font-size: .9rem;
+        text-align: center;
+        padding-bottom: .9rem
+    }
+
+    .employee-roles .role {
+        white-space: nowrap;
+        font-size: .8rem
+    }
+
+
+
+    .info-section {
+        padding: 1rem 2.5rem;
+        background: rgba(255, 255, 255, 0.5)
+    }
+
+    .info-section-wrapper {
+        max-width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .info-title {
+        font-size: 2rem
+    }
+
+    .info-content {
+        padding: 0 2rem
+    }
+
+    .info-icon {
+        padding-bottom: 2rem
+    }
+
+    .video-container {
+        display: none
+    }
+
+    .steps {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .step {
+        max-width: 80%
+    }
+
+    .become-a-mentor {
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.9);
+        letter-spacing: 1px
+    }
+
+    .become-a-mentor-content {
+        max-width: 100%
+    }
+
+    .become-a-mentor-content h2 {
+        font-size: 2rem
+    }
+
+    .mentor-list li {
+        font-size: 1rem
+    }
+
+    .mentor-list li span {
+        font-size: 1.4rem
+    }
+
+    .mentor-role-content {
+        margin-top: 1.2rem;
+    }
+
+    footer {
+        height: 100%
+    }
+
+    .footer-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1rem
+    }
+
+    .more-from-teach2give {
+        font-size: .8rem;
+        width: 100%
+    }
+
+    .more-info h2,
+    .subscription-section h2 {
+        font-size: 1.2rem
+    }
 }
 
+/* 500 PIXELS */
 @media (max-width: 500px) {
+    .logo {
+        width: 60%
+    }
+
+    .mentee-info p {
+        text-align: left;
+        font-size: .9rem
+    }
+
+    .our-purpose {
+        padding: 1rem 1rem;
+    }
+
+    .purpose {
+        border-left: 2px solid var(--red);
+    }
+
+    .our-vision {
+        padding: 0rem;
+        padding: 1rem;
+    }
+
     .what-does-a-mentor-do {
         padding: 0;
         padding: 2.4rem 2.5rem
@@ -2036,7 +2608,7 @@ video:focus {
     }
 
     .feature-img {
-        width: 400px
+        width: 375px
     }
 
     .additional-mentor-content {
@@ -2101,178 +2673,7 @@ video:focus {
         align-items: center;
         gap: 1.5rem;
     }
-}
 
-@media (max-width: 376px) {
-    .feature-img {
-        width: 300px;
-        height: 250px
-    }
-
-    .impact-title {
-        margin: 0;
-        max-width: 100%
-    }
-
-    .result {
-        max-width: 100%
-    }
-}
-
-@media (max-width: 320px) {
-    .additional-mentor-content {
-        font-size: .9rem;
-        font-weight: 600;
-        border-left: 1px solid var(--green);
-        border-bottom: 1px solid var(--red);
-        padding: 1rem
-    }
-
-    .additional-mentor-content .bold {
-        border-left: 1px solid var(--red)
-    }
-
-    .impact-title h2 {
-        font-size: 1.9rem
-    }
-}
-
-@media (max-width: 1040px) {
-    .hero-section {
-        padding: 100px 20px
-    }
-
-    .home .social-media-icons {
-        right: 15px
-    }
-
-    .feature-img {
-        width: 500px
-    }
-
-    .testimonials-container {
-        width: 90%
-    }
-}
-
-@media (max-width: 768px) {
-    .home .content .slogan span {
-        line-height: 61px
-    }
-
-    .about-img-container {
-        display: none
-    }
-
-    .about-section {
-        padding: 1rem 2rem
-    }
-
-    .about-section-wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        max-width: 900px;
-        margin: auto;
-        margin-top: -4rem
-    }
-
-    .testimonials-container {
-        width: 80%;
-        margin: auto;
-        padding-bottom: 0
-    }
-
-    .section-title-wrapper {
-        padding-top: 0;
-        padding-bottom: 2rem
-    }
-
-    .testimonial-section-title {
-        font-size: 2.8rem
-    }
-
-    .testimonial-section-info {
-        font-size: .9rem;
-        width: 100%
-    }
-
-    .testimonial-section-info span {
-        font-size: 1rem
-    }
-
-    .row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .feature-img {
-        width: 600px;
-        height: 350px;
-        margin: auto
-    }
-
-    .small-img-row {
-        margin: auto;
-        margin: 20px 0;
-        border-right: 6px solid var(--red);
-        width: 100%
-    }
-
-    .employee-section {
-        padding: 1rem
-    }
-
-    .employee-section-info-wrapper {
-        margin-top: 0;
-        margin-bottom: 7rem
-    }
-
-    .employee-section .employee-section-title {
-        font-size: 2.5rem;
-        text-align: center
-    }
-
-    .employee-section .employee-section-info {
-        width: 80%;
-        font-size: .9rem
-    }
-
-    .employee-cards {
-        padding-bottom: 3rem
-    }
-
-    .employee-avatar .avatar {
-        width: 100px;
-        height: 100px
-    }
-
-    .employee-card .employee-card-content .employee-name {
-        font-size: 1.1rem
-    }
-
-    .employee-card .employee-card-content .employee-title {
-        font-size: .9rem;
-        text-align: center;
-        padding-bottom: .9rem
-    }
-
-    .employee-roles .role {
-        white-space: nowrap;
-        font-size: .8rem
-    }
-}
-
-@media (max-width: 500px) {
     .home .content .slogan span {
         line-height: 62px
     }
@@ -2346,9 +2747,67 @@ video:focus {
     .sponsor-logo {
         width: 30%
     }
+
+    .home .content .slogan span {
+        line-height: 62px
+    }
+
+    .info-section {
+        padding: 1rem .8rem
+    }
+
+    .info-icon {
+        padding-bottom: 1rem
+    }
+
+    .how-it-works {
+        width: 100%;
+        padding: 2rem
+    }
+
+    .step {
+        max-width: 100%
+    }
+
+    .become-a-mentor-content h2 {
+        font-size: 1.8rem
+    }
+
+    .become-a-mentor-content p {
+        font-size: .9rem
+    }
+
+    .mentor-icon {
+        font-size: 1.7rem
+    }
+
+    footer {
+        padding: 2rem
+    }
 }
 
+/* 376 PIXELS */
 @media (max-width: 376px) {
+    .about-content {
+        padding-left: 0rem;
+        padding: 2rem;
+        border-left: none;
+    }
+
+    .feature-img {
+        width: 300px;
+        height: 250px
+    }
+
+    .impact-title {
+        margin: 0;
+        max-width: 100%
+    }
+
+    .result {
+        max-width: 100%
+    }
+
     .home .content h1 {
         pointer-events: none;
         font-size: 1.4em;
@@ -2409,238 +2868,8 @@ video:focus {
     .small-img img {
         width: 70px
     }
-}
 
-@media (max-width: 320px) {
-    .about-section {
-        padding: 0 1rem
-    }
 
-    .about-section-wrapper {
-        max-width: 100%
-    }
-
-    .feature-img {
-        width: 250px;
-        height: 200px
-    }
-
-    .sponsors {
-        padding-bottom: 2rem
-    }
-}
-
-@media (max-width: 2048px) {
-    .how-it-works {
-        width: 85%;
-        margin: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .how-it-works {
-        width: 90%;
-        margin: auto;
-    }
-}
-
-@media (max-width: 1024px) {
-    .info-section {
-        padding: 0 2.5rem;
-        background: rgba(255, 255, 255, 0.5)
-    }
-
-    .info-section-wrapper {
-        max-width: 70%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .info-title {
-        font-size: 2.2rem
-    }
-
-    .info-content {
-        padding: 0
-    }
-
-    .info-icon {
-        padding-bottom: 3rem
-    }
-
-    .video-container {
-        display: none
-    }
-
-    .steps {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .step {
-        max-width: 60%
-    }
-
-    .become-a-mentor {
-        padding: 1rem 2rem;
-        background: rgba(255, 255, 255, 0.9);
-        letter-spacing: 1px
-    }
-
-    .become-a-mentor-content {
-        max-width: 100%
-    }
-
-    .become-a-mentor-content h2 {
-        font-size: 2rem
-    }
-
-    .mentor-list li {
-        font-size: 1rem
-    }
-
-    .mentor-list li span {
-        font-size: 1.4rem
-    }
-}
-
-@media (max-width: 768px) {
-    .home .content .slogan span {
-        line-height: 62px
-    }
-
-    .info-section {
-        padding: 1rem 2.5rem;
-        background: rgba(255, 255, 255, 0.5)
-    }
-
-    .info-section-wrapper {
-        max-width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .info-title {
-        font-size: 2rem
-    }
-
-    .info-content {
-        padding: 0 2rem
-    }
-
-    .info-icon {
-        padding-bottom: 2rem
-    }
-
-    .video-container {
-        display: none
-    }
-
-    .steps {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column
-    }
-
-    .step {
-        max-width: 80%
-    }
-
-    .become-a-mentor {
-        padding: 1rem 2rem;
-        background: rgba(255, 255, 255, 0.9);
-        letter-spacing: 1px
-    }
-
-    .become-a-mentor-content {
-        max-width: 100%
-    }
-
-    .become-a-mentor-content h2 {
-        font-size: 2rem
-    }
-
-    .mentor-list li {
-        font-size: 1rem
-    }
-
-    .mentor-list li span {
-        font-size: 1.4rem
-    }
-}
-
-@media (max-width: 500px) {
-    .home .content .slogan span {
-        line-height: 62px
-    }
-
-    .info-section {
-        padding: 1rem .8rem
-    }
-
-    .info-icon {
-        padding-bottom: 1rem
-    }
-
-    .how-it-works {
-        width: 100%;
-        padding: 2rem
-    }
-
-    .step {
-        max-width: 100%
-    }
-
-    .become-a-mentor-content h2 {
-        font-size: 1.8rem
-    }
-
-    .become-a-mentor-content p {
-        font-size: .9rem
-    }
-
-    .mentor-icon {
-        font-size: 1.7rem
-    }
-}
-
-@media (max-width: 376px) {
-    .home .content h1 {
-        pointer-events: none;
-        font-size: 1.4em;
-        line-height: 1.3em
-    }
-
-    .home .content h1 span {
-        pointer-events: none;
-        font-size: 1em;
-        font-weight: 700;
-        background: rgba(255, 255, 255, 0.2);
-        -webkit-box-shadow: var(--shadow);
-        box-shadow: var(--shadow);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 3px;
-        padding: 0 .2rem
-    }
-
-    .home .content .slogan span {
-        line-height: 35px
-    }
 
     .become-a-mentor {
         padding: 3rem 1rem
@@ -2651,7 +2880,36 @@ video:focus {
     }
 }
 
+/* 320 PIXELS */
 @media (max-width: 320px) {
+    .additional-mentor-content {
+        font-size: .9rem;
+        font-weight: 600;
+        border-left: 1px solid var(--green);
+        border-bottom: 1px solid var(--red);
+        padding: 1rem
+    }
+
+    .additional-mentor-content .bold {
+        border-left: 1px solid var(--red)
+    }
+
+    .impact-title h2 {
+        font-size: 1.9rem
+    }
+
+    .about-section {
+        padding: 0 1rem
+    }
+
+    .about-section-wrapper {
+        max-width: 100%
+    }
+
+    .sponsors {
+        padding-bottom: 2rem
+    }
+
     .become-a-mentor {
         padding: 0
     }
@@ -2671,146 +2929,14 @@ video:focus {
     .testimonial-section-title {
         font-size: 2rem;
     }
-}
 
-footer {
-    background: var(--white);
-    position: relative;
-    z-index: 222;
-    height: 300px;
-    padding: 4rem
-}
-
-.footer-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between
-}
-
-.more-from-teach2give {
-    font-size: .7rem;
-    font-weight: 600;
-    width: 470px
-}
-
-.more-info h2 {
-    padding-bottom: 1rem
-}
-
-.hyper-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 1rem
-}
-
-.hyper-links .hyper-link {
-    list-style: none;
-    font-weight: 500;
-    color: #575757;
-    cursor: pointer;
-    -webkit-transition: .4s all ease;
-    -o-transition: .4s all ease;
-    transition: .4s all ease
-}
-
-.hyper-links .hyper-link a {
-    text-decoration: none;
-    color: #575757;
-    cursor: pointer;
-    transition: .4s all ease
-}
-
-.hyper-links .hyper-link:hover,
-.hyper-links .hyper-link:hover a:hover {
-    color: var(--text-color)
-}
-
-.subscription-section h2 {
-    padding-bottom: 1rem
-}
-
-.subscription-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: .6rem
-}
-
-.subscription-form input {
-    border: none;
-    border-radius: 6px;
-    background: #c5c5c5;
-    padding: .7rem;
-    font-weight: 600;
-    letter-spacing: 1.1px
-}
-
-.subscription-form input:focus {
-    outline: none
-}
-
-.subscription-form .subscribe-btn {
-    max-width: 150px;
-    float: right;
-    background: var(--green);
-    color: var(--white);
-    border: none;
-    border-radius: 6px;
-    padding: .8rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer
-}
-
-@media (max-width: 1024px) {
-    .more-from-teach2give {
-        width: 300px
+    .feature-img {
+        width: 250px;
+        height: 200px;
+        margin-left: 0rem;
     }
 
-    .more-info h2,
-    .subscription-section h2 {
-        font-size: 1rem
-    }
-}
-
-@media (max-width: 768px) {
-    footer {
-        height: 100%
-    }
-
-    .footer-content {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        gap: 1rem
-    }
-
-    .more-from-teach2give {
-        font-size: .8rem;
-        width: 100%
-    }
-
-    .more-info h2,
-    .subscription-section h2 {
-        font-size: 1.2rem
-    }
-}
-
-@media (max-width: 500px) {
-    footer {
-        padding: 2rem
+    .time-section-title .sub-title {
+        font-size: 1.2rem;
     }
 }
