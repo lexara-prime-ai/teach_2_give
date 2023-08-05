@@ -32,7 +32,7 @@
                     </a>
                 </li>
 
-                <li class="hyper-link">
+                <li class="hyper-link" onclick="displayContactForm()">
                     Contact Us
                 </li>
             </ul>
