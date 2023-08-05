@@ -3,8 +3,7 @@
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_2.mp4" autoplay
-        muted loop></video>
+    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?> autoplay muted loop></video>
 
     <!-- CONTENT -->
     <div class="content active">
@@ -51,7 +50,7 @@
     <!-- WRAPPER -->
     <div class="info-section-wrapper">
         <!-- INFO CONTENT -->
-        <div class="info-content" data-aos="fade-right" data-aos-delay="300">
+        <div class="info-content" data-aos="fade-right" data-aos-delay="150">
             <!-- INFO ICON -->
             <i class="info-icon fa-solid fa-thumbtack"></i>
             <!-- TITLE -->
@@ -95,14 +94,14 @@
         </div>
 
         <!-- INFO VIDEO -->
-        <div class="video-container" data-aos="fade-left" data-aos-delay="400">
-            <video src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_1.mp4" autoplay muted loop></video>
+        <div class="video-container" data-aos="fade-left" data-aos-delay="200">
+            <video src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?> autoplay muted loop></video>
         </div>
     </div>
 </section>
 
 <!-- HOW IT WORKS SECTION -->
-<section class="how-it-works" data-aos="fade-up" data-aos-delay="300">
+<section class="how-it-works" data-aos="fade-up" data-aos-delay="250">
     <h2>
         How it works?
     </h2>
@@ -172,11 +171,10 @@
         <!--===========================-->
         <!-- TODO: REMOVE active CLASS   -->
         <!--===========================-->
-        <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_2.mp4" autoplay
-            muted loop></video>
+        <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?> autoplay muted loop></video>
 
         <!-- CONTENT -->
-        <div class="become-a-mentor-content" data-aos="fade-up" data-aos-delay="300">
+        <div class="become-a-mentor-content white-card" data-aos="fade-up" data-aos-delay="200">
             <!-- TITLE -->
             <h2>
                 Why be a Mentor?
@@ -220,6 +218,29 @@
         </div>
     </div>
 </section>
+
+<!--==============-->
+<!-- CONTACT FORM -->
+<!--==============-->
+<div class="contact-form sticky">
+    <form action="#">
+        <h2 class="form-title">
+            Contact Us
+        </h2>
+
+        <input type="text" id="user-input" placeholder="Name...">
+        <input type="email" id="user-input" placeholder="Email...">
+
+        <textarea name="message" id="message" placeholder="Message..."></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <button class="submit-form-btn">
+            Send Message
+        </button>
+    </form>
+</div>
+
+
 <!-- WHY BECOME A MENTOR SECTION end -->
 <!--===================-->
 <!--===================-->
