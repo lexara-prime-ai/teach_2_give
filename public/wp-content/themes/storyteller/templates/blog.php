@@ -10,8 +10,7 @@ Template Name: Blog
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_1.mp4" autoplay
-        muted loop></video>
+    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?> autoplay muted loop></video>
 
     <!-- CONTENT -->
     <div class="content active">
@@ -62,8 +61,7 @@ Template Name: Blog
                 <!-- CARD -->
                 <div class="card active">
                     <div class="card-img-container">
-                        <img src=<?php echo get_theme_file_uri('/assets/images/thumbnails/brian_orina.png') ?>
-                            alt="post" class="card-img">
+                        <img src=<?php echo get_theme_file_uri('/assets/images/thumbnails/brian_orina.png') ?> alt="post" class="card-img">
                     </div>
 
                     <!-- CARD TEXT -->
@@ -91,8 +89,7 @@ Template Name: Blog
                 <!-- CARD -->
                 <div class="card">
                     <div class="card-img-container">
-                        <img src=<?php echo get_theme_file_uri('/assets/images/thumbnails/brian_orina.png') ?>
-                            alt="post" class="card-img">
+                        <img src=<?php echo get_theme_file_uri('/assets/images/thumbnails/brian_orina.png') ?> alt="post" class="card-img">
                     </div>
 
                     <!-- CARD TEXT -->
@@ -153,11 +150,34 @@ Template Name: Blog
                     </p>
                 </div>
             </div>
-
         </div>
-
     </div>
 </section>
+
+
+
+
+<!--==============-->
+<!-- CONTACT FORM -->
+<!--==============-->
+<div class="contact-form sticky">
+    <form action="#">
+        <h2 class="form-title">
+            Contact Us
+        </h2>
+
+        <input type="text" id="user-input" placeholder="Name...">
+        <input type="email" id="user-input" placeholder="Email...">
+
+        <textarea name="message" id="message" placeholder="Message..."></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <button class="submit-form-btn">
+            Send Message
+        </button>
+    </form>
+</div>
+
 
 
 
