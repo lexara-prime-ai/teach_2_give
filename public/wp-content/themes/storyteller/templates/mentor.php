@@ -10,12 +10,11 @@ Template Name: Mentor
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_2.mp4" autoplay
-        muted loop></video>
+    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?> autoplay muted loop></video>
     <!-- CONTENT -->
     <div class="content active">
         <!-- SLOGAN -->
-        <h1 class="slogan"> WHY MENTOR 
+        <h1 class="slogan"> WHY MENTOR
             <br>
             <span> A <span class="green"> STUDENT? </span>
             </span>
@@ -43,7 +42,7 @@ Template Name: Mentor
 <!--===========================-->
 <!--===========================-->
 <!-- WHAT DOES A MENTOR SECTION -->
-<section class="what-does-a-mentor-do" data-aos="fade-up" data-aos-delay="500">
+<section class="what-does-a-mentor-do" data-aos="fade-up" data-aos-delay="300">
     <div class="what-does-a-mentor-do-title">
         <h2> What does a <span>Mentor</span> do? </h2>
         <p class="bold">" <span>Empowering Change through Mentorship</span>: Your Time, Their Transformation "</p>
@@ -56,18 +55,16 @@ Template Name: Mentor
             <!-- VIDEO CONTAINER -->
             <div class="content-wrapper-col">
                 <div class="feature-img">
-                    <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/nickson_chebii.png') ?> width="100%">
+                    <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/nickson_chebii.png') ?> width="100%" title="press play">
                     <!-- PLAY BUTTON -->
-                    <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?> class="play-btn"
-                        onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/nickson_chebii.mp4')">
+                    <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?> class="play-btn" onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?>')">
                     <!-- VIDEO PLAYER -->
                     <section class="video-player" id="video-player">
                         <video width="100%" controls autoplay id="video">
                             <source src="" type="video/mp4">
                         </video>
                         <!-- CLOSE BUTTON -->
-                        <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/close.png') ?>
-                            class="close-btn" onclick="stopVideo()">
+                        <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/close.png') ?> class="close-btn" onclick="stopVideo()">
                     </section>
                 </div>
             </div>
@@ -83,16 +80,16 @@ Template Name: Mentor
                         to help the students navigate the professional world successfully. Through mentorship, students
                         gain a competitive edge in the global market.</li>
                 </ul>
-                <ul class="virtues">
+                <!-- <ul class="virtues">
                     <li class="virtue"> We recognize the impact of knowledge over financial assistance. </li>
                     <li class="virtue"> We believe in equipping students with business knowledge and skills. </li>
                     <li class="virtue">
                         Our goal is to empower students to uplift themselves, support their families and contribute
                         to the betterment of their communities.
                     </li>
-                </ul>
+                </ul> -->
                 <!-- CTA BUTTON -->
-                <button class="become-a-mentor-cta"> Become a Mentor Today </button>
+                <button class="become-a-mentor-cta" onclick="displayApplicationForm()"> Become a Mentor Today </button>
             </div>
         </div>
         <!-- ADDITIONAL CONTENT -->
@@ -193,7 +190,7 @@ Template Name: Mentor
 
             </ul>
             <!-- CTA BUTTON -->
-            <button class="become-a-mentor-cta"> Become a Mentor Today </button>
+            <button class="become-a-mentor-cta" onclick="displayApplicationForm()"> Become a Mentor Today </button>
         </div>
     </div>
 
@@ -212,5 +209,50 @@ Template Name: Mentor
         </p>
     </div>
 </section>
+
+
+<!--==============-->
+<!-- CONTACT FORM -->
+<!--==============-->
+<div class="contact-form sticky">
+    <form action="#">
+        <h2 class="form-title">
+            Contact Us
+        </h2>
+
+        <input type="text" id="user-input" placeholder="Name...">
+        <input type="email" id="user-input" placeholder="Email...">
+
+        <textarea name="message" id="message" placeholder="Message..."></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <button class="submit-form-btn">
+            Send Message
+        </button>
+    </form>
+</div>
+
+
+<!--==============-->
+<!-- CONTACT FORM -->
+<!--==============-->
+<div class="become-a-mentor-form sticky">
+    <form action="#">
+        <h2 class="form-title">
+            Become a Mentor
+        </h2>
+
+        <input type="text" id="user-input" placeholder="Full Name...">
+        <input type="email" id="user-input" placeholder="Email...">
+
+        <textarea name="message" id="message" placeholder="Why would you like to be a mentor..."></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <button class="submit-form-btn">
+            Submit
+        </button>
+    </form>
+</div>
+
 
 <?php get_footer(); ?>
