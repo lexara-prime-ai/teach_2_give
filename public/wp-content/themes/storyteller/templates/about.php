@@ -1,6 +1,6 @@
 <?php
 
-get_header(); 
+get_header();
 
 /*
 Template Name: About Us
@@ -10,8 +10,7 @@ Template Name: About Us
 <!-- HERO SECTION -->
 <section class="home hero-section">
     <!-- VIDEO -->
-    <video class="video-slide active" src="https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/footage_1.mp4" autoplay
-        muted loop></video>
+    <video class="video-slide active" src=<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?> autoplay muted loop></video>
 
     <!-- CONTENT -->
     <div class="content active">
@@ -118,8 +117,7 @@ Template Name: About Us
         <div class="about-section-wrapper">
             <!-- ABOUT IMAGE -->
             <div class="about-img-container" data-aos="flip-up" data-aos-delay="300">
-                <img class="about-img" src=<?php echo get_theme_file_uri('/assets/images/photos/elizabeth_kasili.png') ?>
-                    alt="about-img">
+                <img class="about-img" src=<?php echo get_theme_file_uri('/assets/images/photos/elizabeth_kasili.png') ?> alt="about-img">
                 <div class="overlay">
                     <img class="overlay" src=<?php echo get_theme_file_uri('/assets/images/photos/elizabeth_kasili.png') ?> alt="overlay">
                 </div>
@@ -142,8 +140,7 @@ Template Name: About Us
                         for
                         the
                         better. We embark on a
-                        journey of <span class="green">empowerment</span> by educating individuals in <span
-                            class="red">third-world</span> countries enabling them to thrive and
+                        journey of <span class="green">empowerment</span> by educating individuals in <span class="red">third-world</span> countries enabling them to thrive and
                         catalyze positive transformations within their communities.
                     </p>
                 </div>
@@ -265,18 +262,15 @@ Template Name: About Us
                     <div class="feature-img" data-aos="fade-up" data-aos-delay="300">
                         <img class="large-thumbnail" src=<?php echo get_theme_file_uri('/assets/images/thumbnails/faith_kihara.png') ?> width="100%">
                         <!-- PLAY BUTTON -->
-                        <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
-                            class="play-btn"
-                            onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/faith_kihara.mp4')">
+                        <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?> class="play-btn" onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?>')">
 
                         <!-- VIDEO PLAYER -->
-                        <section class="video-player" id="video-player" #videoPlayer>
+                        <section class="video-player" id="video-player">
                             <video width="100%" controls autoplay id="video" #video>
                                 <source src="" type="video/mp4">
                             </video>
                             <!-- CLOSE BUTTON -->
-                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/close.png') ?>
-                                class="close-btn" onclick="stopVideo()">
+                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/close.png') ?> class="close-btn" onclick="stopVideo()">
                         </section>
                     </div>
                 </div>
@@ -285,12 +279,9 @@ Template Name: About Us
                     <!-- MENTEE FOOTAGE -->
                     <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
                         <div class="small-img">
-                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/faith_kihara.png') ?>
-                                width="40%">
+                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/faith_kihara.png') ?> width="40%">
                             <!-- PLAY BUTTON -->
-                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
-                                class="play-btn"
-                                onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/faith_kihara.mp4')">
+                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?> class="play-btn" onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?>')">
                         </div>
                         <div class="mentee-info">
                             <p>
@@ -300,7 +291,7 @@ Template Name: About Us
                             </p>
 
                             <p class="mentee-bio">
-                                Say hello to Brian Orina....
+                                Quality of software is my responsibility and I enjoy every bit of it.
                             </p>
                         </div>
                     </div>
@@ -308,12 +299,9 @@ Template Name: About Us
                     <!-- MENTEE FOOTAGE -->
                     <div class="small-img-row" data-aos="fade-up" data-aos-delay="600">
                         <div class="small-img">
-                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/brian_orina.png') ?>
-                                width="40%">
+                            <img src=<?php echo get_theme_file_uri('/assets/images/photos/brian_orina.png') ?> width="40%">
                             <!-- PLAY BUTTON -->
-                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?>
-                                class="play-btn"
-                                onclick="playVideo('https://teach2givemedia.s3.eu-north-1.amazonaws.com/videos/brian_orina.mp4')">
+                            <img src=<?php echo get_theme_file_uri('/assets/images/media_icons/play.png') ?> class="play-btn" onclick="playVideo('<?php echo get_theme_file_uri('/assets/videos/footage_1.mp4'); ?>')">
                         </div>
                         <div class="mentee-info">
                             <p>
@@ -353,8 +341,7 @@ Template Name: About Us
             <div class="employee-card" data-aos="fade-up" data-aos-delay="300">
                 <!-- AVATAR -->
                 <div class="employee-avatar">
-                    <img src=<?php echo get_theme_file_uri('/assets/images/photos/jonathan_ndambuki.png') ?>
-                        alt="avatar" class="avatar">
+                    <img src=<?php echo get_theme_file_uri('/assets/images/photos/jonathan_ndambuki.png') ?> alt="avatar" class="avatar">
                 </div>
 
                 <!-- CARD CONTENT -->
@@ -392,8 +379,7 @@ Template Name: About Us
             <div class="employee-card center" data-aos="fade-up" data-aos-delay="400">
                 <!-- AVATAR -->
                 <div class="employee-avatar">
-                    <img src=<?php echo get_theme_file_uri('/assets/images/photos/elizabeth_kasili.png') ?> alt="avatar"
-                        class="avatar center">
+                    <img src=<?php echo get_theme_file_uri('/assets/images/photos/elizabeth_kasili.png') ?> alt="avatar" class="avatar center">
                 </div>
 
                 <!-- CARD CONTENT -->
@@ -431,8 +417,7 @@ Template Name: About Us
             <div class="employee-card" data-aos="fade-up" data-aos-delay="500">
                 <!-- AVATAR -->
                 <div class="employee-avatar">
-                    <img src=<?php echo get_theme_file_uri('/assets/images/photos/daniel_wachira.png') ?> alt="avatar"
-                        class="avatar">
+                    <img src=<?php echo get_theme_file_uri('/assets/images/photos/daniel_wachira.png') ?> alt="avatar" class="avatar">
                 </div>
 
                 <!-- CARD CONTENT -->
@@ -489,18 +474,34 @@ Template Name: About Us
         </h2>
         <!-- SPONSORS -->
         <div class="sponsors" data-aos="fade-up" data-aos-delay="300">
-            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/sos.png') ?> alt="sponsor"
-                class="sponsor-logo">
-            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/compassion.png') ?> alt="sponsor"
-                class="sponsor-logo">
-            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/save_the_children.png') ?> alt="sponsor"
-                class="sponsor-logo">
-            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/Develop_africa.png') ?> alt="sponsor"
-                class="sponsor-logo">
-            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/kids_in_africa.png') ?> alt="sponsor"
-                class="sponsor-logo">
+            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/sos.png') ?> alt="sponsor" class="sponsor-logo">
+            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/compassion.png') ?> alt="sponsor" class="sponsor-logo">
+            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/save_the_children.png') ?> alt="sponsor" class="sponsor-logo">
+            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/Develop_africa.png') ?> alt="sponsor" class="sponsor-logo">
+            <img src=<?php echo get_theme_file_uri('/assets/images/sponsors/kids_in_africa.png') ?> alt="sponsor" class="sponsor-logo">
         </div>
     </section>
+</div>
+
+<!--==============-->
+<!-- CONTACT FORM -->
+<!--==============-->
+<div class="contact-form sticky">
+    <form action="#">
+        <h2 class="form-title">
+            Contact Us
+        </h2>
+
+        <input type="text" id="user-input" placeholder="Name...">
+        <input type="email" id="user-input" placeholder="Email...">
+
+        <textarea name="message" id="message" placeholder="Message..."></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <button class="submit-form-btn">
+            Send Message
+        </button>
+    </form>
 </div>
 
 
